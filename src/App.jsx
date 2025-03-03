@@ -7,6 +7,11 @@ import './App.css'
  */
 export const App = () => {
   return (
-    <header> Cat APP </header>
+    <div>
+    <header> Cat APP </header> 
+    <h1>犬の画像を表示するサイトです</h1>
+    <img src="https://images.dog.ceo/breeds/elkhound-norwegian/n02091467_442.jpg"></img>
+    </div>
+    
   )
 }
