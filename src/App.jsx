@@ -2,16 +2,19 @@
 
 import './App.css'
 
+import { useState } from 'react'
 /**
  * @type {() => JSX.Element}
  */
 export const App = () => {
+  const [dogUrl,setDogUrl] = useState("https://images.dog.ceo/breeds/elkhound-norwegian/n02091467_442.jpg");
+
   return (
-    <div>
+    <>
     <header> Cat APP </header> 
     <h1>犬の画像を表示するサイトです</h1>
-    <img src="https://images.dog.ceo/breeds/elkhound-norwegian/n02091467_442.jpg"></img>
-    </div>
+    <img src={dogUrl}></img>
+    </>
     
   )
 }
