@@ -1,8 +1,8 @@
 // DO NOT DELETE
 
 import './App.css'
-
 import { useState } from 'react'
+import { Header } from "./Header"
 /**
  * @type {() => JSX.Element}
  */
@@ -30,7 +30,7 @@ export const App = () => {
 
   return (
     <>
-    <header> Cat APP </header> 
+    <Header/>
     <h1>犬の画像を表示するサイトです</h1>
     <img className="updatebtn" src={dogUrl}></img>
     <button onClick={chgUrl}>更新</button>
