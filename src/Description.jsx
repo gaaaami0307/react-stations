@@ -1,5 +1,6 @@
 // @ts-check
 import { useState } from 'react'
+import { DogImage } from "./DogImage"
 
 export const Description = () => {
   const [dogUrl,setDogUrl] = useState("https://images.dog.ceo/breeds/elkhound-norwegian/n02091467_442.jpg");
@@ -26,7 +27,7 @@ export const Description = () => {
 
   return <>
     <h1>犬の画像を表示するサイトです</h1>
-    <img className="updatebtn" src={dogUrl}></img>
+    <DogImage url={dogUrl}/>
     <button onClick={chgUrl}>更新</button>
   </>
 }
