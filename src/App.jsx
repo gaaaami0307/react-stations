@@ -16,14 +16,16 @@ export const App = () => {
       if(!response.ok) throw new Error(`Error: status-${response.status}`);
 
       const json = await response.json();
-      console.log(json);
+      return json;
     } catch(error){
       console.error(error.message);
     }
   }
 
-  function chgUrl(){
-    setDogUrl("https://images.dog.ceo/breeds/hound-english/n02089973_1132.jpg");
+  async function chgUrl(){
+    const data = await getUrlData();
+    console.log(data.message);
+    setDogUrl(data.message);
   }
 
   return (
