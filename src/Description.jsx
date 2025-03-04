@@ -27,7 +27,7 @@ export const Description = () => {
 
   return <>
     <h1>犬の画像を表示するサイトです</h1>
-    <DogImage url={dogUrl}/>
+    <DogImage imageUrl={dogUrl}/>
     <button onClick={chgUrl}>更新</button>
   </>
 }

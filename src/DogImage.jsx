@@ -1,8 +1,8 @@
 // @ts-check
 
-export const DogImage = ({url = ""}) => {
+export const DogImage = ({imageUrl = ""}) => {
   return <>
-    <img className="updatebtn" src={url}></img>
+    <img className="updatebtn" src={imageUrl}></img>
   </>
 }
 
