@@ -32,7 +32,7 @@ export const App = () => {
     <>
     <header> Cat APP </header> 
     <h1>犬の画像を表示するサイトです</h1>
-    <img src={dogUrl}></img>
+    <img className="updatebtn" src={dogUrl}></img>
     <button onClick={chgUrl}>更新</button>
     </>
     
