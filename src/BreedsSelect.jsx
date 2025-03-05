@@ -2,8 +2,7 @@
 
 import { useState } from "react"
 
-export const BreedsSelect = ({breeds = [""]}) => {
-  const [selectedBreed,setSelectedBreed] = useState("");
+export const BreedsSelect = ({breeds = [""], selectedBreed, setSelectedBreed}) => {
 
   return <>
     <select value={selectedBreed} onChange={(e)=>setSelectedBreed(e.target.value)}>

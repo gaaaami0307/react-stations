@@ -6,6 +6,8 @@ import { BreedsSelect } from "./BreedsSelect"
 export const DogListContainer = () => {
 
   const [breeds,SetBreeds] = useState(['']);
+  const [dogList,SetDogList] = useState(['']);
+  const [selectedBreed,setSelectedBreed] = useState("");
 
   useEffect(()=>{
     fetch("https://dog.ceo/api/breeds/list/all")
@@ -17,8 +19,15 @@ export const DogListContainer = () => {
   });
   },[])
 
+  function changeDogList(){
+    fetch(`https://dog.ceo/api/breed/${selectedBreed}/images/random/12`)
+    .then((response) => response.json())
+    .then((data) => SetDogList(data.message));
+  }
+
   return <>
-    <BreedsSelect breeds={breeds}/>
+    <BreedsSelect breeds={breeds} selectedBreed={selectedBreed} setSelectedBreed={setSelectedBreed}/>
+    <button onClick={changeDogList}>表示</button>
   </>
 }
 
