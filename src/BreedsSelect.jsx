@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-export const BreedsSelect = (breeds = []) => {
+export const BreedsSelect = ({breeds = [""]}) => {
   const [selectedBreed,setSelectedBreed] = useState("");
 
   return <>
