@@ -1,6 +1,7 @@
 // @ts-check
 
 import { useEffect,useState } from "react"
+import { BreedsSelect } from "./BreedsSelect"
 
 export const DogListContainer = () => {
 
@@ -9,10 +10,13 @@ export const DogListContainer = () => {
   useEffect(()=>{
     fetch("https://dog.ceo/api/breeds/list/all")
     .then((response) => response.json())
-    .then((data) => SetBreeds(data));
+    .then((data) => SetBreeds(data.message));
+    console.log(breeds)
   },[])
 
-  return <></>
+  return <>
+    <BreedsSelect breeds={breeds}/>
+  </>
 }
 
 export default DogListContainer
