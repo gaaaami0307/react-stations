@@ -14,7 +14,7 @@ export const DogListContainer = () => {
     .then((response) => response.json())
     .then((data) => {
       const ary = Object.keys(data.message);
-      console.log(ary)
+      //console.log(ary)
       SetBreeds(ary);
   });
   },[])
@@ -28,6 +28,9 @@ export const DogListContainer = () => {
   return <>
     <BreedsSelect breeds={breeds} selectedBreed={selectedBreed} setSelectedBreed={setSelectedBreed}/>
     <button onClick={changeDogList}>表示</button>
+    {dogList.map((value,index) => (
+      <img src={value}></img>
+    ))}
   </>
 }
 
